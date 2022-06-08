@@ -29,7 +29,7 @@ public class Snek : MonoBehaviour
     {
         transform.position = Vector3.Lerp(transform.position, new Vector3(
             Mathf.Round(transform.position.x) + moveDir.x,
-            Mathf.Ceil(transform.position.y) + moveDir.y,
+            Mathf.Round(transform.position.y) + moveDir.y,
             transform.position.z), Time.fixedDeltaTime * speed);
     }
 }
