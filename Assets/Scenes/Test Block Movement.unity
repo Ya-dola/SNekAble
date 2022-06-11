@@ -621,8 +621,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8d945287e24cb44f92033d66b0deab4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDir: {x: 0, y: 0}
-  speed: 14
+  newMoveDir: {x: 0, y: 0}
+  currentMoveDir: {x: 0, y: 0}
+  smoothStep: 0.1
 --- !u!114 &826555461
 MonoBehaviour:
   m_ObjectHideFlags: 0
