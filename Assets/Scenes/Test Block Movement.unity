@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 313280383}
   m_Layer: 0
   m_Name: Food Test
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -623,7 +623,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newMoveDir: {x: 0, y: 0}
   currentMoveDir: {x: 0, y: 0}
-  smoothStep: 0.1
+  smoothStep: 0.2
+  segmentPrefab: {fileID: 2311797725674737411, guid: 821c47e8e2a7a384181b8d52783a750c,
+    type: 3}
 --- !u!114 &826555461
 MonoBehaviour:
   m_ObjectHideFlags: 0

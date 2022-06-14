@@ -31,10 +31,10 @@ public class Food : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
+        // Randomize position of food after it gets eaten by Snake
         if (col.CompareTag("Snek"))
         {
-            
+            RandomizePosition();
         }
-        RandomizePosition();
     }
 }
