@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Snek
   - Food
+  - Obstacle
   layers:
   - Default
   - TransparentFX

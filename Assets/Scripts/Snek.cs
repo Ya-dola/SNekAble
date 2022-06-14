@@ -154,9 +154,19 @@ public class Snek : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
+        // Collision with Food
         if (col.CompareTag("Food"))
-        {
+            // Grow Segments when eating Normal Food
             Grow();
+
+        // Collision with Obstacles
+        if (col.CompareTag("Obstacle"))
+        {
+            print("You Lost");
+
+            Time.timeScale = 0f;
+
+            StopAllCoroutines();
         }
     }
 }
