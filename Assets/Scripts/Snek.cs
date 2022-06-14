@@ -59,26 +59,30 @@ public class Snek : MonoBehaviour
     // Change Direction of Movement and Keep it Persistent
     private void ChangeDir()
     {
-        // Up Direction
-        if (newMoveDir.Equals(new Vector2(0f, 1f)))
+        // Up Direction Not when moving Down
+        if (newMoveDir.Equals(new Vector2(0f, 1f)) &&
+            !currentMoveDir.Equals(new Vector2(0f, -1f)))
         {
             currentMoveDir = new Vector2(0f, 1f);
         }
 
-        // Down Direction
-        if (newMoveDir.Equals(new Vector2(0f, -1f)))
+        // Down Direction Not when moving Up
+        if (newMoveDir.Equals(new Vector2(0f, -1f)) &&
+            !currentMoveDir.Equals(new Vector2(0f, 1f)))
         {
             currentMoveDir = new Vector2(0f, -1f);
         }
 
-        // Left Direction
-        if (newMoveDir.Equals(new Vector2(-1f, 0f)))
+        // Left Direction Not when moving Right
+        if (newMoveDir.Equals(new Vector2(-1f, 0f)) &&
+            !currentMoveDir.Equals(new Vector2(1f, 0f)))
         {
             currentMoveDir = new Vector2(-1f, 0f);
         }
 
-        // Right Direction
-        if (newMoveDir.Equals(new Vector2(1f, 0f)))
+        // Right Direction Not when moving Left
+        if (newMoveDir.Equals(new Vector2(1f, 0f)) &&
+            !currentMoveDir.Equals(new Vector2(-1f, 0f)))
         {
             currentMoveDir = new Vector2(1f, 0f);
         }

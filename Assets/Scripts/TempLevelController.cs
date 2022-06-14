@@ -24,6 +24,9 @@ public class TempLevelController : MonoBehaviour
     // Reloads the Current Scene
     private void ReloadScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
+
+        // Reset Time Scale to Ensure everything works as intended
+        Time.timeScale = 1f;
     }
 }
