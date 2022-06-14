@@ -164,9 +164,11 @@ public class Snek : MonoBehaviour
         {
             print("You Lost");
 
+            // Stop Everything
             Time.timeScale = 0f;
-
             StopAllCoroutines();
+
+            // Call Lose Screen
         }
     }
 }
