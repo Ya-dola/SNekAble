@@ -6,16 +6,18 @@ using UnityEngine.InputSystem;
 
 public class Snek : MonoBehaviour
 {
-    [Header("Movement Vectors")]
-    public Vector2 newMoveDir;
-
-    public Vector2 currentMoveDir;
-
     [Header("Movement Smoothness")]
     public float smoothStep = 0.1f;
 
     [Header("Segments")]
     public Transform segmentPrefab;
+
+    public int initialSegmentsSize = 2;
+
+    [Header("Movement Vectors")]
+    public Vector2 newMoveDir;
+
+    public Vector2 currentMoveDir;
 
     private List<Transform> _segments;
 
@@ -33,6 +35,12 @@ public class Snek : MonoBehaviour
 
         // Adding Head as 1st Segment to List
         _segments.Add(transform);
+
+        // Adding the Initial Segments to the Snake
+        for (int i = 0; i < initialSegmentsSize; i++)
+        {
+            _segments.Add(Instantiate(segmentPrefab));
+        }
 
         // Movement Coroutine
         StartCoroutine(MoveSnekConfigRout());
